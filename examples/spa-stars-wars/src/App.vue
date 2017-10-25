@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <router-view/>
+    <header-partial></header-partial>
+    <main class="sw-main">
+      <router-view/>
+    </main>
+    <footer-partial></footer-partial>
   </div>
 </template>
 
 <script>
+import HeaderPartial from '@/partials/header/header'
+import FooterPartial from '@/partials/footer/footer'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components: {
+    HeaderPartial,
+    FooterPartial
+  }
 }
 </script>
 
-<style lang="scss" src="./main.scss"></style>
+<style lang="scss" src="./_scss/main.scss"></style>
