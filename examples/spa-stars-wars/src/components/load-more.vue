@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col">
       <p class="text-center">
-        <button v-if="!isCurrentPage" class="btn btn-primary" @click.prevent="onLoadMore">Load more</button>
+        <button v-if="!isCurrentPage" class="btn btn-primary btn-lg" @click.prevent="onLoadMore">Load more</button>
       </p>
     </div>
   </div>
