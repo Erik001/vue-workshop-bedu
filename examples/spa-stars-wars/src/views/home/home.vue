@@ -1,6 +1,7 @@
 <template src="./home.html"></template>
 
 <script>
+import _ from 'lodash'
 import LoadMore from '@/components/load-more'
 import PersonCard from '@/components/person-card'
 import {getPeople} from '@/services/people'
@@ -26,6 +27,11 @@ export default {
       return {
         'sw-loading': this.isLoading
       }
+    },
+    filteredPeople () {
+      return _.filter(this.people, (person) => {
+        return _.includes(person.name.toLowerCase(), this.search.person.toLowerCase())
+      })
     }
   },
   methods: {

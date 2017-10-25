@@ -8,7 +8,7 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <input type="text" class="form-control" v-model="search.person" placeholder="Enter a character name to search ...">
+                        <input type="text" class="form-control" :disabled="isLoading" v-model="search.person" placeholder="Enter a character name to search ...">
                         <p class="form-text text-muted">We'll never share your preferences with anyone else.</p>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div v-else class="row">
-                <person-card v-for="person in people" :key="person.name" :person="person"></person-card>
+                <person-card v-for="person in filteredPeople" :key="person.name" :person="person"></person-card>
             </div>
         </section>
         <section class="sw-pagination">
