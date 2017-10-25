@@ -4,6 +4,6 @@ import axios from 'axios'
  * Function to get all star wars characters
  * @return AxiosPromise
  */
-export function getPeople () {
-  return axios.get('https://swapi.co/api/people')
+export function getPeople (page) {
+  return axios.get(`https://swapi.co/api/people/?page=${page}`)
 }
