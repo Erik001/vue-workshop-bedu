@@ -1,3 +1,42 @@
-<div class="home-view">
-    <p>Home view</p>
+<div class="sw-home-view">
+    <div class="container">
+        <section class="sw-tools">
+            <div class="row">
+                <div class="col">
+                    <h3>Star Wars Characters</h3>
+                    <p>Example using Vue + VueRouter + Axios + Other drugs</p>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter a character name to search ...">
+                        <p class="form-text text-muted">We'll never share your preferences with anyone else.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sw-content">
+            <div class="row">
+                <div class="col-4" v-for="person in people">
+                    <div class="card sw-card text-center">
+                        <div class="card-body">
+                            <div class="sw-avatar align-middle">
+                                <img v-if="person.gender === 'female'" src="../../assets/female.png" width="128">
+                                <img v-else src="../../assets/male.png" width="128">
+                            </div>
+                            <h4 class="card-title">{{person.name}}</h4>
+                            <h6 class="card-subtitle text-muted">{{person.birth_year}}</h6>
+                            <p class="card-text"></p>
+                            <hr>
+                            <div class="text-center">
+                                <button class="btn btn-dark">View profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="sw-pagination">
+
+        </section>
+    </div>
 </div>
