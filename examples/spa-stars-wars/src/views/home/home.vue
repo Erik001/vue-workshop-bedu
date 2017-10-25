@@ -2,6 +2,7 @@
 
 <script>
 import LoadMore from '@/components/load-more'
+import PersonCard from '@/components/person-card'
 import {getPeople} from '@/services/people'
 export default {
   name: 'Home',
@@ -43,7 +44,8 @@ export default {
     }
   },
   components: {
-    LoadMore
+    LoadMore,
+    PersonCard
   }
 }
 </script>

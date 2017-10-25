@@ -24,23 +24,7 @@
                 </div>
             </div>
             <div v-else class="row">
-                <div class="col-4" v-for="person in people">
-                    <div class="card sw-card text-center">
-                        <div class="card-body">
-                            <div class="sw-avatar align-middle">
-                                <img v-if="person.gender === 'female'" src="../../assets/female.png" width="128">
-                                <img v-else src="../../assets/male.png" width="128">
-                            </div>
-                            <h4 class="card-title">{{person.name}}</h4>
-                            <h6 class="card-subtitle text-muted">{{person.birth_year}}</h6>
-                            <p class="card-text"></p>
-                            <hr>
-                            <div class="text-center">
-                                <button class="btn btn-dark">View profile</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <person-card v-for="person in people" :person="person"></person-card>
             </div>
         </section>
         <section class="sw-pagination">
