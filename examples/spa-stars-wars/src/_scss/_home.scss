@@ -9,6 +9,10 @@
   .sw-avatar {
     padding-bottom: 20px;
   }
+
+  &.sw-loading {
+    min-height: 900px;
+  }
 }
 
 .sw-card {
