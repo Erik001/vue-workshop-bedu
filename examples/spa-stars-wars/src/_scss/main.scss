@@ -1,0 +1,15 @@
+// Main styles
+@charset 'utf-8';
+@import 'variables';
+
+// Bootstrap 4
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+// Header
+@import 'header';
+
+// Footer
+@import 'footer';
+
+// Home
+@import 'home';
