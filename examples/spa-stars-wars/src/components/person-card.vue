@@ -11,7 +11,7 @@
         <p class="card-text"></p>
         <hr>
         <div class="text-center">
-          <button class="btn btn-dark">View profile</button>
+          <button class="btn btn-dark" @click.prevent="goToProfile()">View profile</button>
         </div>
       </div>
     </div>
@@ -25,6 +25,12 @@ export default {
     person: {
       type: Object,
       required: true
+    }
+  },
+  methods: {
+    goToProfile () {
+      let personId = this.person.url.split('/')[5]
+      this.$router.push({name: 'Person', params: { id: personId }})
     }
   }
 }
