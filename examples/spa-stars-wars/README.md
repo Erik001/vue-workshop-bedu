@@ -1,6 +1,6 @@
-# spa-medium
+# SPA Medium for StarWars Characters
 
-> A Vue.js project
+> A Vue.js project using multiple architectures for demo
 
 ## Build Setup
 
