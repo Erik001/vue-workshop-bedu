@@ -8,12 +8,14 @@
     "dev": "node build/dev-server.js",
     "start": "npm run dev",
     "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "deploy:github-pages": "push-dir --dir=dist --branch=gh-pages"
   },
   "dependencies": {
     "axios": "^0.17.0",
     "bootstrap": "^4.0.0-beta.2",
     "lodash": "^4.17.4",
+    "push-dir": "^0.4.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
